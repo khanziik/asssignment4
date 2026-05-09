@@ -98,7 +98,7 @@ BFS uses:
 4. Repeat until queue becomes empty
 
 ## Time Complexity
-
+:contentReference[oaicite:0]{index=0}
 
 Where:
 - V = vertices
