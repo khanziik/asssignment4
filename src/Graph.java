@@ -26,10 +26,11 @@ public class Graph {
 
     //print graph
     public void printGraph() {
+        System.out.println("GRAPH STRUCTURE: ");
         for (int vertex : adjacencyList.keySet()) {
-            System.out.print(vertex);
+            System.out.print(vertex + " -> ");
             for (int neighbor : adjacencyList.get(vertex)) {
-                System.out.print(neighbor);
+                System.out.print(neighbor + " ");
             }
             System.out.println();
         }
@@ -41,7 +42,7 @@ public class Graph {
         Queue<Integer> queue = new LinkedList<>();
         visited.add(start);
         queue.add(start);
-        System.out.print("BFS:");
+        System.out.print("BFS: ");
 
         while (!queue.isEmpty()){
             int current = queue.poll();
@@ -65,7 +66,7 @@ public class Graph {
     //helper methode
     private void dfsHelper(int current, Set<Integer> visited ){
         visited.add(current);
-        System.out.print(current)
+        System.out.print(current + " ");
                 for(int neighbor : adjacencyList.get(current)){
                     if (!visited.contains(neighbor)){
                         dfsHelper(neighbor, visited);
