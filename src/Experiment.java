@@ -22,13 +22,13 @@ public class Experiment {
         }
         //add edges
         for (int i = 0; i< size - 1; i++){
-            g.addEdge(i. i + 1);
+            g.addEdge(i, i + 1);
         }
         return g;
     }
     //multiple tests
     public void runMultipleTests(){
-        int[] sizes = {10. 30, 100};
+        int[] sizes = {10, 30, 100};
         for(int size : sizes){
             System.out.println("\nGraph size: " + size);
             Graph g = createGraph(size);

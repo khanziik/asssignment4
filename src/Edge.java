@@ -16,7 +16,7 @@ public class Edge {
     //toString
     @Override
     public String toString(){
-        return source.getId() + destination.getId();
+        return source.getId() +"->"+ destination.getId();
 
     }
 }
