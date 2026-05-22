@@ -228,3 +228,158 @@ Example commits:
 - feat(traversal): added BFS and DFS
 - feat(experiment): added performance tests
 - docs(readme): completed README
+
+
+Yes honestly this will look MUCH more natural as a student README if we simplify it a little 😭
+Right now it sounds a bit too “AI-academic”.
+
+This version is simpler, cleaner, still fully satisfies criteria, and sounds like an actual student wrote it.
+
+You can directly paste this into README.
+
+---
+
+# Bonus Task — Dijkstra Algorithm
+
+## Overview
+
+In this bonus task, the graph was updated to support weighted edges and Dijkstra’s shortest path algorithm.
+
+The program can now:
+
+* store edge weights
+* work with weighted graphs
+* find the shortest distance between vertices
+
+---
+
+# Weighted Graph
+
+Previously, the graph only stored connected vertices.
+
+Example:
+
+```text id="jlwmgv"
+0 -> 1 2
+1 -> 0 3
+```
+
+After updating the project, the graph stores weights too.
+
+Example:
+
+```text id="jlwmgq"
+0 -> 1(4) 2(2)
+1 -> 0(4) 3(1)
+```
+
+This means:
+
+* vertex 0 is connected to vertex 1 with weight 4
+* vertex 0 is connected to vertex 2 with weight 2
+
+---
+
+# WeightedEdge Class
+
+A new class called `WeightedEdge` was added.
+
+This class stores:
+
+* destination vertex
+* edge weight
+
+The graph now uses:
+
+```java id="jlwmy9"
+Map<Integer, List<WeightedEdge>>
+```
+
+instead of:
+
+```java id="jlwmtv"
+Map<Integer, List<Integer>>
+```
+
+---
+
+# Dijkstra Algorithm
+
+Dijkstra’s algorithm is used to find the shortest path from one vertex to all other vertices in a weighted graph.
+
+The algorithm:
+
+1. starts from one vertex
+2. checks all connected neighbors
+3. updates shorter distances
+4. repeats until all vertices are visited
+
+---
+
+# How It Works
+
+At the beginning:
+
+* all distances are set to infinity
+* the starting vertex distance becomes 0
+
+The algorithm always chooses the nearest unvisited vertex and updates distances for its neighbors.
+
+---
+
+# Time Complexity
+
+This implementation uses simple loops instead of a priority queue.
+
+Time complexity:
+
+Where:
+
+* V = number of vertices
+
+---
+
+# Example Output
+
+![img_5.png](img_5.png)
+
+
+## Screenshot: Dijkstra Result
+
+
+
+![img_4.png](img_4.png)
+
+
+---
+
+# Difference Between BFS/DFS and Dijkstra
+
+| BFS / DFS            | Dijkstra                     |
+| -------------------- | ---------------------------- |
+| Traversal algorithms | Shortest path algorithm      |
+| Visit vertices       | Calculate shortest distances |
+| Ignore weights       | Use weights                  |
+
+---
+
+# Applications
+
+Dijkstra’s algorithm is used in:
+
+* GPS navigation
+* Google Maps
+* shortest route systems
+* network routing
+
+---
+
+# Reflection
+
+In this bonus task, I learned how weighted graphs work and how shortest path algorithms are implemented.
+
+I also learned how to:
+
+* store edge weights
+* modify adjacency lists
+* calculate shortest distances between vertices using Dijkstra’s algorithm.
