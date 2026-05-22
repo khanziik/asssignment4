@@ -2,7 +2,7 @@ import java.sql.Array;
 import java.util.*;
 public class Graph {
     //adjacency list
-    private Map<Integer, List<Integer>> adjacencyList;
+    private Map<Integer, List<WeightedEdge>> adjacencyList;
 
     //constructor
     public Graph() {
@@ -14,14 +14,14 @@ public class Graph {
         adjacencyList.putIfAbsent(v.getId(), new ArrayList<>());
     }
 
-    //add edge
-    public void addEdge(int from, int to) {
+    // UPDATED add edge
+    public void addEdge(int from, int to, int weight) {
+
         adjacencyList.putIfAbsent(from, new ArrayList<>());
         adjacencyList.putIfAbsent(to, new ArrayList<>());
 
-        adjacencyList.get(from).add(to);
-        //undirected graph
-        adjacencyList.get(to).add(from);
+        adjacencyList.get(from).add(new WeightedEdge(to, weight));
+        adjacencyList.get(to).add(new WeightedEdge(from, weight));
     }
 
     //print graph

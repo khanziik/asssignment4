@@ -14,3 +14,6 @@ public class Vertex {
         return "Vertex " + id;
     }
 }
+// 0 1
+1 7
+2 5 7
