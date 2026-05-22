@@ -1,24 +1,24 @@
 public class WeightedEdge {
-    public class WeightedEdge {
 
-        int destination;
-        int weight;
+    private int destination;
+    private int weight;
 
-        public WeightedEdge(int destination, int weight) {
-            this.destination = destination;
-            this.weight = weight;
-        }
+    public WeightedEdge(int destination, int weight) {
 
-        public int getDestination() {
-            return destination;
-        }
+        this.destination = destination;
+        this.weight = weight;
+    }
 
-        public int getWeight() {
-            return weight;
-        }
+    public int getDestination() {
+        return destination;
+    }
 
-        @Override
-        public String toString() {
-            return destination + "(" + weight + ")";
-        }
-    }}
+    public int getWeight() {
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return destination + "(" + weight + ")";
+    }
+}
