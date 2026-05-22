@@ -22,7 +22,7 @@ public class Experiment {
         }
         //add edges
         for (int i = 0; i< size - 1; i++){
-            g.addEdge(i, i + 1);
+            g.addEdge(i, i + 1, (i % 5) + 1);
         }
         return g;
     }
