@@ -17,7 +17,7 @@ public class Experiment {
     public Graph createGraph(int size){
         Graph g = new Graph();
         //add verticies
-        for(int i = 0; i < size -1; i++){
+        for(int i = 0; i < size; i++){
             g.addVertex(new Vertex(i));
         }
         //add edges
